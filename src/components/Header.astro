@@ -1,28 +1,33 @@
 ---
 interface Props {
-    baner: string;
-    imagenBaner: string;
     fotoPerfil: string;
 }
-const { baner } = Astro.props;
-const {imagenBaner} = Astro.props;
+
 const {fotoPerfil} = Astro.props;
 ---
-<section class="header bg-black p-3">
+<header class="header bg-black pb-1 pt-1">
     <div class="fotoPerfil border rounded-full bg-white ">{fotoPerfil}</div>
     <div class="hero">
-        <img class="logo" src={imagenBaner} />
-        <p>{baner}</p>
-    </div>    
-</section>
+        <img class="logo" src="./public/img/club-pg.png" />
+        <p>"CLUB DE PROGRAMADORES GOYA"</p>
+    </div>
+    <nav class="nav text-white flex gap-3 items-center">
+        <a href="">INICIO</a>
+        <a href="">RED</a>
+        <a href="">NOTIFICACIONES</a>
+        <a href="">Para Negocios</a>
+    </nav>    
+</header>
 
 <style>
-    @import url("https://fonts.cdnfonts.com/css/thegoodmonolith");
+    @import url('https://fonts.cdnfonts.com/css/pulsar-class-solid');
     @media screen and (min-width: 320px) {
     .header {
         width: 100%;
+        height: 5rem;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     .hero {
         display: flex;
@@ -30,12 +35,13 @@ const {fotoPerfil} = Astro.props;
         align-items: center;
         font-family: "Pulsar Class Solid", sans-serif;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
         color: aliceblue;
+        transform: translateX(5rem);
     }
     .logo{
-        width: 90%;
-        height: 6rem;
+        width: 100%;
+        height: 3rem;
     }    
     }
     @media screen and (min-width: 1023px){
@@ -44,11 +50,17 @@ const {fotoPerfil} = Astro.props;
             height: 3rem;
         }
         .fotoPerfil{
-            width: 6rem;
-            height: 6rem;
-            transform: translateX(-20rem);
+            width: 4rem;
+            height: 4rem;
+            transform: translateX(-13rem);
             border-color: aliceblue;
-            /* background-image: imagenBaner="./public/img/programador-Freepik.png"; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+        .nav{
+            transform: translateX(13rem);
         }
 
     }
