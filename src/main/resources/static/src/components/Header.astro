@@ -1,0 +1,68 @@
+---
+interface Props {
+    fotoPerfil: string;
+}
+
+const {fotoPerfil} = Astro.props;
+---
+<header class="header bg-black pb-1 pt-1">
+    <div class="fotoPerfil border rounded-full bg-white ">{fotoPerfil}</div>
+    <div class="hero">
+        <img class="logo" src="./public/img/club-pg.png" />
+        <p>"CLUB DE PROGRAMADORES GOYA"</p>
+    </div>
+    <nav class="nav text-white flex gap-3 items-center">
+        <a href="">INICIO</a>
+        <a href="">RED</a>
+        <a href="">NOTIFICACIONES</a>
+        <a href="">Para Negocios</a>
+    </nav>    
+</header>
+
+<style>
+    @import url('https://fonts.cdnfonts.com/css/pulsar-class-solid');
+    @media screen and (min-width: 320px) {
+    .header {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Pulsar Class Solid", sans-serif;
+        text-align: center;
+        font-size: 1rem;
+        color: aliceblue;
+        transform: translateX(5rem);
+    }
+    .logo{
+        width: 100%;
+        height: 3rem;
+    }    
+    }
+    @media screen and (min-width: 1023px){
+        .logo{
+            width: 100%;
+            height: 3rem;
+        }
+        .fotoPerfil{
+            width: 4rem;
+            height: 4rem;
+            transform: translateX(-13rem);
+            border-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+        .nav{
+            transform: translateX(13rem);
+        }
+
+    }
+    
+</style>

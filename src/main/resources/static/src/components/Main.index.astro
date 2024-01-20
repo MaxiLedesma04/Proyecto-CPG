@@ -1,0 +1,73 @@
+---
+interface Props {
+}
+---
+<section class="news flex flex-col items-center gap-3 text-white w-full">
+    <section>
+        <div class="news-publicaciones flex flex-col gap-3">
+          <p class="border border-white rounded w-2/4 h-full mt-3 text-center">(Crea tu publicacion)</p>
+          <div class="flex gap-3">
+            <img class="icono-publicaciones mb-3" src="./public/img/usuario.png" alt="">
+            <p>Publicar</p>
+            <p>Archivo multimedia<p/>
+          <div/>
+
+        </div>
+    </section>
+      <section>
+        <div class="news-caja">   
+                <img class="icono" src="./public/img/usuario.png" alt="">
+                <p>PERFILES IT</p>
+        </div>
+      </section>
+      <section>
+        <div class="news-caja">
+          <img class="icono" src="./public/img/empresa.png" alt="">
+          <p> EMPRESAS</p>
+        </div>
+      </section>
+</section>
+<style>
+     .news{
+        padding: 1.5rem;
+        background-image: url(./public/img/background-5035258_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .news-publicaciones{
+        width: 50rem;
+        height: 5rem;
+        background: rgba(51, 39, 39, 0.52);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.3px);
+        -webkit-backdrop-filter: blur(7.3px);
+        border: 1px solid rgba(51, 39, 39, 0.3);
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .icono-publicaciones{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .news-caja{
+        width: 50rem;
+        height: 20rem;
+        background: rgba(51, 39, 39, 0.52);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.3px);
+        -webkit-backdrop-filter: blur(7.3px);
+        border: 1px solid rgba(51, 39, 39, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .icono{
+        width: 5rem;
+    }
+</style>
